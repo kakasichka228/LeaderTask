@@ -1,0 +1,2126 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="In LeaderTask, you can create tasks, divide them into subtasks and fine-tune them to suit your needs. Delegate tasks to your team today."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="LeaderTask is a To-Do List and Your Task Management App"
+    />
+    <meta
+      property="og:description"
+      content="In LeaderTask, you can create tasks, divide them into subtasks and fine-tune them to suit your needs. Delegate tasks to your team today."
+    />
+    <meta property="og:url" content="https://www.leadertask.com/" />
+    <meta property="og:site_name" content="LeaderTask" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="preload"
+      href="/fonts/Cygre-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Cygre-SemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Cygre-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="canonical" href="https://www.leadertask.com/" />
+    <meta name="generator" content="Astro v5.15.0" />
+    <title>LeaderTask is a To-Do List and Your Task Management App</title>
+    <link rel="preload" href="/accelerator-2.CysF0fUI.css" as="style" />
+    <link rel="stylesheet" href="/accelerator-2.CysF0fUI.css" />
+    <style>
+      :root {
+        --swiper-theme-color: #007aff;
+      }
+
+      :host {
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+      }
+
+      .swiper {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+        display: block;
+      }
+
+      .swiper-vertical > .swiper-wrapper {
+        flex-direction: column;
+      }
+
+      .swiper-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        transition-property: transform;
+        transition-timing-function: var(
+          --swiper-wrapper-transition-timing-function,
+          initial
+        );
+        box-sizing: content-box;
+      }
+
+      .swiper-android .swiper-slide,
+      .swiper-ios .swiper-slide,
+      .swiper-wrapper {
+        transform: translateZ(0);
+      }
+
+      .swiper-horizontal {
+        touch-action: pan-y;
+      }
+
+      .swiper-vertical {
+        touch-action: pan-x;
+      }
+
+      .swiper-slide {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition-property: transform;
+        display: block;
+      }
+
+      .swiper-slide-invisible-blank {
+        visibility: hidden;
+      }
+
+      .swiper-autoheight,
+      .swiper-autoheight .swiper-slide {
+        height: auto;
+      }
+
+      .swiper-autoheight .swiper-wrapper {
+        align-items: flex-start;
+        transition-property: transform, height;
+      }
+
+      .swiper-backface-hidden .swiper-slide {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .swiper-3d.swiper-css-mode .swiper-wrapper {
+        perspective: 1200px;
+      }
+
+      .swiper-3d .swiper-wrapper {
+        transform-style: preserve-3d;
+      }
+
+      .swiper-3d {
+        perspective: 1200px;
+        .swiper-slide,
+        .swiper-cube-shadow {
+          transform-style: preserve-3d;
+        }
+      }
+
+      .swiper-css-mode {
+        > .swiper-wrapper {
+          overflow: auto;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        > .swiper-wrapper > .swiper-slide {
+          scroll-snap-align: start start;
+        }
+
+        &.swiper-horizontal {
+          > .swiper-wrapper {
+            scroll-snap-type: x mandatory;
+          }
+        }
+
+        &.swiper-vertical {
+          > .swiper-wrapper {
+            scroll-snap-type: y mandatory;
+          }
+        }
+
+        &.swiper-free-mode {
+          > .swiper-wrapper {
+            scroll-snap-type: none;
+          }
+
+          > .swiper-wrapper > .swiper-slide {
+            scroll-snap-align: none;
+          }
+        }
+
+        &.swiper-centered {
+          > .swiper-wrapper:before {
+            content: "";
+            flex-shrink: 0;
+            order: 9999;
+          }
+
+          > .swiper-wrapper > .swiper-slide {
+            scroll-snap-align: center center;
+            scroll-snap-stop: always;
+          }
+        }
+
+        &.swiper-centered.swiper-horizontal {
+          > .swiper-wrapper > .swiper-slide:first-child {
+            margin-inline-start: var(--swiper-centered-offset-before);
+          }
+
+          >.swiper-wrapper: before {
+            height: 100%;
+            min-height: 1px;
+            width: var(--swiper-centered-offset-after);
+          }
+        }
+
+        &.swiper-centered.swiper-vertical {
+          > .swiper-wrapper > .swiper-slide:first-child {
+            margin-block-start: var(--swiper-centered-offset-before);
+          }
+
+          >.swiper-wrapper: before {
+            width: 100%;
+            min-width: 1px;
+            height: var(--swiper-centered-offset-after);
+          }
+        }
+      }
+
+      .swiper-3d {
+        .swiper-slide-shadow,
+        .swiper-slide-shadow-left,
+        .swiper-slide-shadow-right,
+        .swiper-slide-shadow-top,
+        .swiper-slide-shadow-bottom {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 10;
+        }
+
+        .swiper-slide-shadow {
+          background: #00000026;
+        }
+
+        .swiper-slide-shadow-left {
+          background-image: linear-gradient(to left, #00000080, #0000);
+        }
+
+        .swiper-slide-shadow-right {
+          background-image: linear-gradient(to right, #00000080, #0000);
+        }
+
+        .swiper-slide-shadow-top {
+          background-image: linear-gradient(to top, #00000080, #0000);
+        }
+
+        .swiper-slide-shadow-bottom {
+          background-image: linear-gradient(to bottom, #00000080, #0000);
+        }
+      }
+
+      .swiper-lazy-preloader {
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -21px;
+        margin-top: -21px;
+        z-index: 10;
+        transform-origin: 50%;
+        box-sizing: border-box;
+        border: 4px solid
+          var(--swiper-preloader-color, var(--swiper-theme-color));
+        border-radius: 50%;
+        border-top-color: transparent;
+      }
+
+      .swiper:not(.swiper-watch-progress),
+      .swiper-watch-progress .swiper-slide-visible {
+        .swiper-lazy-preloader {
+          animation: swiper-preloader-spin 1s infinite linear;
+        }
+      }
+
+      .swiper-lazy-preloader-white {
+        --swiper-preloader-color: #fff;
+      }
+
+      .swiper-lazy-preloader-black {
+        --swiper-preloader-color: #000;
+      }
+
+      @keyframes swiper-preloader-spin {
+        0% {
+          transform: rotate(0);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .app-button[data-astro-cid-c6ht4qe3] {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .app-button--ripple[data-astro-cid-c6ht4qe3]:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: var(--ripple-size, 12rem);
+        height: var(--ripple-size, 12rem);
+        border-radius: 9999px;
+        background-color: currentColor;
+        pointer-events: none;
+        mix-blend-mode: screen;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+        transition:
+          transform 0.6s ease-out,
+          opacity 0.6s ease-out;
+      }
+
+      .app-button--ripple[data-astro-cid-c6ht4qe3]:active:after {
+        opacity: 0.35;
+        transform: translate(-50%, -50%) scale(0.2);
+        transition: none;
+      }
+
+      .swiper-slide[data-astro-cid-pvxdty7h] {
+        height: auto;
+      }
+
+      .calendar-tab[data-astro-cid-sea2gklt] {
+        transition:
+          background-color 0.6s ease-out,
+          color 0.6s ease-out;
+      }
+
+      .ripple-container[data-astro-cid-sea2gklt] {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .ripple-effect[data-astro-cid-sea2gklt] {
+        position: absolute;
+        pointer-events: none;
+        background-color: #0a0a0c26;
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 0.6s ease-out;
+      }
+
+      @keyframes ripple {
+        0% {
+          transform: scale(0);
+          opacity: 0.1;
+        }
+
+        to {
+          transform: scale(1);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray grid grid-rows-a1a min-h-screen font-body">
+    <header
+      id="header"
+      class="sticky top-0 z-50 transition-all duration-200 bg-gray"
+    >
+      <div
+        class="px-2.5 h-13 lg:h-auto relative z-10 py-2 lg:py-5 bg-gray lg:px-16 mx-auto xl:container flex justify-between items-center"
+      >
+        <a
+          href="/"
+          class="flex items-center gap-4"
+          aria-label="LeaderTask - перейти на главную страницу"
+        >
+          <img
+            src="/photo/logo-full.webp"
+            alt="logo"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="auto"
+            width="656"
+            height="160"
+            class="w-28.75 h-7 lg:w-41 lg:h-10"
+          />
+        </a>
+        <div class="flex items-center gap-2.5 lg:gap-8">
+          <a
+            id="get-started-button"
+            href="LeaderTask.apk"
+            class="app-button transition-colors cursor-pointer duration-200 relative overflow-hidden text-accent-orange border font-semibold border-accent-orange text-[12px] lg:text-[16px] hover:bg-accent-orange-dark bg-transparent hover:text-white active:bg-accent-orange-dark active:text-white px-3 py-2 rounded-2 no-underline !text-[#FF4C00]"
+            data-click-effect="false"
+            data-astro-cid-c6ht4qe3="true"
+            >Get started for free
+          </a>
+        </div>
+      </div>
+      <div id="mobile-menu" class="asbolute inset-0 lg:hidden">
+        <div
+          id="mobile-menu-content"
+          class="p-6 z-6 w-full justify-items-center transition-all duration-200 absolute left-0 rounded-b-2.5 grid gap-3 bg-gray -translate-y-full top-0 opacity-0"
+        >
+          <a
+            id="app-button-rlt8g4gd2"
+            href="/features"
+            class="app-button transition-colors cursor-pointer duration-200 relative overflow-hidden bg-transparent hover:bg-gray-light text-primary px-3 py-2 active:bg-gray-light px-3 py-2 rounded-2 no-underline !text-[#0A0A0C] w-max"
+            data-click-effect="false"
+            data-astro-cid-c6ht4qe3="true"
+            >Features
+          </a>
+          <a
+            id="app-button-n2si7z20t"
+            href="/pricing"
+            class="app-button transition-colors cursor-pointer duration-200 relative overflow-hidden bg-transparent hover:bg-gray-light text-primary px-3 py-2 active:bg-gray-light px-3 py-2 rounded-2 no-underline !text-[#0A0A0C] w-max"
+            data-click-effect="false"
+            data-astro-cid-c6ht4qe3="true"
+            >Pricing
+          </a>
+          <a
+            id="mobile-menu-get-started-button"
+            href="LeaderTask.apk"
+            class="app-button transition-colors cursor-pointer duration-200 relative overflow-hidden bg-accent-orange text-white hover:bg-accent-orange-dark active:bg-accent-orange-dark font-bold px-3 py-2 rounded-2 no-underline text-white! w-max px-3 py-2"
+            data-click-effect="false"
+            data-astro-cid-c6ht4qe3="true"
+            >Get started for free
+          </a>
+          <div class="flex gap-5 py-3">
+            <a
+              href="https://apps.apple.com/ru/app/leadertask-task-to-do-list/id6504613667"
+              class="w-10 h-10 rounded-3 flex items-center justify-center bg-white"
+              aria-label="Скачать LeaderTask из App Store"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/photo/apple-logo.webp"
+                alt="Apple"
+                class="w-5 h-5"
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.leadertask.app"
+              class="w-10 h-10 rounded-3 flex items-center justify-center bg-white"
+              aria-label="Скачать LeaderTask из Google Play"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/photo/play-logo.webp"
+                alt="Google Play"
+                class="w-5 h-5"
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              href="https://www.rustore.ru/catalog/app/com.leadertask.app"
+              class="w-10 h-10 rounded-3 flex items-center justify-center bg-white"
+              aria-label="Скачать LeaderTask из Rustore"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/photo/rustore-logo.webp"
+                alt="Rustore"
+                class="w-5 h-5"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          id="mobile-menu-overlay"
+          class="absolute inset-0 h-dvh w-full transition-all duration-200 bg-dark-alpha-40 z-5 opacity-0 pointer-events-none"
+        ></div>
+      </div>
+    </header>
+    <main>
+      <div class="px-2.5 lg:px-16 xl:container w-full mx-auto">
+        <section>
+          <div
+            class="section-top-indent flex flex-col items-center gap-10 lg:gap-15"
+          >
+            <div class="flex flex-col items-center gap-5 lg:gap-10 text-center">
+              <h1
+                class="text-[32px] leading-9 lg:text-[72px] lg:leading-20 max-w-230 font-bold text-primary"
+              >
+                Task manager for
+                <span
+                  class="text-transparent bg-clip-text bg-linear-to-r from-accent-orange via-accent-orange to-accent-red"
+                  >individual
+                </span>
+                <br class="hidden lg:block" />
+                and
+                <span
+                  class="text-transparent bg-clip-text bg-linear-to-r from-accent-orange via-accent-orange to-accent-red"
+                  >team
+                </span>
+                productivity
+              </h1>
+              <p
+                class="text-[16px] leading-6 lg:text-[28px] lg:leading-8 text-secondary max-w-200"
+              >
+                Plan, organize, and accomplish — tasks, lists, reminders,
+                <br class="hidden lg:block" />projects, and more
+              </p>
+            </div>
+            <a
+              id="get-started-button"
+              href="LeaderTask.apk "
+              class="app-button transition-colors cursor-pointer duration-200 relative overflow-hidden app-button--ripple bg-accent-orange text-white hover:bg-accent-orange-dark active:bg-accent-orange-dark font-bold px-3 py-2 lg:px-6 lg:py-4 text-sm lg:text-[22px] leading-6 rounded-3 font-bold no-underline text-white! w-max"
+              data-click-effect="true"
+              data-astro-cid-c6ht4qe3="true"
+              >Get started for free
+            </a>
+            <div class="relative w-full hidden lg:block max-w-244">
+              <img
+                src="/photo/desktop.webp"
+                alt="Desktop"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async"
+                width="976"
+                height="639"
+                class="w-full h-full object-cover"
+              />
+              <img
+                src="/photo/mobile.webp"
+                alt="Mobile"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async"
+                width="244"
+                height="505"
+                class="absolute top-33 -left-20 w-full h-full max-w-58.5 max-h-126.25 object-cover"
+              />
+            </div>
+            <img
+              src="/photo/hero_mobile_img.webp"
+              alt="hero img"
+              fetchpriority="high"
+              loading="eager"
+              sizes="100vw"
+              decoding="async"
+              width="625"
+              height="833"
+              class="w-full lg:hidden"
+            />
+          </div>
+        </section>
+        <section class="flex flex-col gap-6 lg:gap-15">
+          <div
+            class="grid pt-4 px-4 lg:p-0 lg:grid-cols-a1 gap-3 lg:gap-8 bg-white rounded-5 lg:bg-transparent lg:rounded-none shadow-card lg:shadow-none"
+          >
+            <div
+              class="lg:px-8 lg:max-w-120 lg:pt-19 lg:pb-23 flex flex-col gap-6 bg-white rounded-5 lg:shadow-card"
+            >
+              <div class="flex gap-3 items-center">
+                <svg class="w-5 h-5 lg:w-8 lg:h-8">
+                  <use href="/photo/all-icons.svg#icon-checklist"></use>
+                </svg>
+                <p
+                  class="text-[14px] lg:text-[20px] lg:leading-6 font-bold text-secondary"
+                >
+                  Tasks
+                </p>
+              </div>
+              <h3
+                class="text-[24px] lg:text-[44px] lg:leading-10 font-bold text-primary"
+              >
+                Organize without the chaos
+              </h3>
+              <p
+                class="text-[16px] leading-6 lg:text-[20px] lg:leading-8 text-secondary max-w-100"
+              >
+                Bring all your work projects, personal tasks and assignments
+                together in one place. Plan, delegate and keep on top of
+                everything that matters every day.
+              </p>
+            </div>
+            <div
+              class="bg-orange-light hidden lg:block overflow-hidden shadow-card rounded-5 pr-0.5 pb-0.5 pt-8 pl-8"
+            >
+              <img
+                src="/photo/in-focus.webp"
+                alt="In Focus"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="auto"
+                width="3136"
+                height="1792"
+                class="w-full max-h-112 rounded-tl-5 rounded-br-5 h-full object-cover object-top"
+              />
+            </div>
+            <img
+              src="/photo/organize_task.webp"
+              alt="organize task"
+              loading="lazy"
+              sizes="100vw"
+              decoding="async"
+              fetchpriority="auto"
+              width="977"
+              height="705"
+              class="w-full lg:hidden"
+            />
+          </div>
+          <div
+            class="grid pt-4 px-4 lg:p-0 lg:grid-cols-1a gap-3 lg:gap-8 bg-white rounded-5 lg:bg-transparent lg:rounded-none shadow-card lg:shadow-none"
+          >
+            <div
+              class="bg-purple-light hidden lg:block shadow-card rounded-5 p-8"
+            >
+              <img
+                src="/photo/plans.webp"
+                alt="Plans"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="auto"
+                width="2707"
+                height="1691"
+                class="w-full max-h-117.5 rounded-4 h-full object-cover object-top"
+              />
+            </div>
+            <div
+              class="lg:px-8 lg:max-w-116 lg:pt-19 lg:pb-23 flex flex-col gap-6 bg-white rounded-5 lg:shadow-card"
+            >
+              <div class="flex gap-3 items-center">
+                <svg class="w-5 h-5 lg:w-8 lg:h-8">
+                  <use href="/photo/all-icons.svg#icon-trello"></use>
+                </svg>
+                <p
+                  class="text-[14px] lg:text-[20px] lg:leading-6 font-bold text-secondary"
+                >
+                  Boards
+                </p>
+              </div>
+              <h3
+                class="text-[24px] lg:text-[44px] lg:leading-10 font-bold text-primary"
+              >
+                Visualize <br class="hidden lg:block" />
+                workflows <br class="hidden lg:block" />and goals
+              </h3>
+              <p
+                class="text-[16px] leading-6 lg:text-[20px] lg:leading-8 text-secondary"
+              >
+                Boards help you map the journey of a task from start to finish.
+                Drag cards between stages, build funnels, and visually manage
+                your projects or personal workflows.
+              </p>
+            </div>
+            <img
+              src="/photo/organize_trello.webp"
+              alt="organize trello"
+              loading="lazy"
+              sizes="100vw"
+              decoding="async"
+              fetchpriority="auto"
+              width="600"
+              height="432"
+              class="w-full lg:hidden"
+            />
+          </div>
+          <section
+            class="flex flex-col gap-3 lg:gap-6 lg:items-center bg-white shadow-card rounded-5 pt-4 px-4 lg:p-8"
+            id="calendar-section"
+            data-show-title="true"
+            data-astro-cid-sea2gklt
+          >
+            <div
+              id="calendar-title"
+              class="flex gap-3 items-center"
+              data-astro-cid-sea2gklt
+            >
+              <svg class="w-5 h-5 lg:w-8 lg:h-8" data-astro-cid-sea2gklt>
+                <use
+                  href="/photo/all-icons.svg#icon-calendar"
+                  data-astro-cid-sea2gklt
+                ></use>
+              </svg>
+              <span
+                class="text-[14px] lg:text-[20px] leading-0 font-bold text-secondary"
+                data-astro-cid-sea2gklt
+                >Calendar</span
+              >
+            </div>
+            <h3
+              class="text-[24px] lg:text-[44px] leading-7 lg:leading-13 font-bold text-primary"
+              data-astro-cid-sea2gklt
+            >
+              Keep your schedule under control
+            </h3>
+            <ul
+              class="flex overflow-x-auto max-w-[260px] min-[331px]:max-w-none justify-center lg:justify-start px-0 pt-2 pb-3 lg:p-0 gap-2 lg:gap-5 flex-nowrap"
+              id="calendar-tabs"
+              data-astro-cid-sea2gklt
+            >
+              <li
+                data-tab-value="day"
+                data-tab-index="0"
+                class="px-1.5 py-1 lg:px-3 lg:py-2 font-semibold xl:font-bold text-[14px] lg:text-[16px] rounded-2 cursor-pointer relative overflow-hidden calendar-tab whitespace-nowrap flex-shrink-0 bg-secondary text-gray min-[331px]:ml-0 ml-5"
+                data-astro-cid-sea2gklt
+              >
+                Day
+                <div class="ripple-container" data-astro-cid-sea2gklt></div>
+              </li>
+              <li
+                data-tab-value="week"
+                data-tab-index="1"
+                class="px-1.5 py-1 lg:px-3 lg:py-2 font-semibold xl:font-bold text-[14px] lg:text-[16px] rounded-2 cursor-pointer relative overflow-hidden calendar-tab whitespace-nowrap flex-shrink-0 bg-light text-tertiary hover:bg-gray-light"
+                data-astro-cid-sea2gklt
+              >
+                Week
+                <div class="ripple-container" data-astro-cid-sea2gklt></div>
+              </li>
+              <li
+                data-tab-value="month"
+                data-tab-index="2"
+                class="px-1.5 py-1 lg:px-3 lg:py-2 font-semibold xl:font-bold text-[14px] lg:text-[16px] rounded-2 cursor-pointer relative overflow-hidden calendar-tab whitespace-nowrap flex-shrink-0 bg-light text-tertiary hover:bg-gray-light"
+                data-astro-cid-sea2gklt
+              >
+                Month
+                <div class="ripple-container" data-astro-cid-sea2gklt></div>
+              </li>
+              <li
+                data-tab-value="year"
+                data-tab-index="3"
+                class="px-1.5 py-1 lg:px-3 lg:py-2 font-semibold xl:font-bold text-[14px] lg:text-[16px] rounded-2 cursor-pointer relative overflow-hidden calendar-tab whitespace-nowrap flex-shrink-0 bg-light text-tertiary hover:bg-gray-light"
+                data-astro-cid-sea2gklt
+              >
+                Year
+                <div class="ripple-container" data-astro-cid-sea2gklt></div>
+              </li>
+              <li
+                data-tab-value="ten years"
+                data-tab-index="4"
+                class="px-1.5 py-1 lg:px-3 lg:py-2 font-semibold xl:font-bold text-[14px] lg:text-[16px] rounded-2 cursor-pointer relative overflow-hidden calendar-tab whitespace-nowrap flex-shrink-0 bg-light text-tertiary hover:bg-gray-light"
+                data-astro-cid-sea2gklt
+              >
+                10 years
+                <div class="ripple-container" data-astro-cid-sea2gklt></div>
+              </li>
+            </ul>
+            <div
+              class="relative w-full h-75 lg:h-139.5 shadow-card lg:w-187"
+              id="calendar-images"
+              data-astro-cid-sea2gklt
+            >
+              <img
+                src="/photo/day.webp"
+                alt="calendar Day"
+                data-tab-value="day"
+                data-astro-cid-sea2gklt="true"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="auto"
+                width="784"
+                height="558"
+                class="absolute inset-0 hidden lg:block rounded-4 w-full h-full object-cover transition-opacity duration-300 calendar-image opacity-100"
+              />
+              <img
+                src="/photo/day_mobile.webp"
+                alt="calendar Day"
+                data-tab-value="day"
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 0px"
+                data-astro-cid-sea2gklt="true"
+                decoding="async"
+                fetchpriority="auto"
+                width="595"
+                height="589"
+                class="absolute inset-0 block lg:hidden rounded-4 w-full h-full object-cover transition-opacity duration-300 calendar-image opacity-100"
+              />
+              <img
+                src="/photo/week.webp"
+                alt="calendar Week"
+                data-tab-value="week"
+                data-astro-cid-sea2gklt="true"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="auto"
+                width="784"
+                height="558"
+                class="absolute inset-0 hidden lg:block rounded-4 w-full h-full object-cover transition-opacity duration-300 calendar-image opacity-0"
+              />
+              <img
+                src="/photo/week_mobile.webp"
+                alt="calendar Week"
+                data-tab-value="week"
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 0px"
+                data-astro-cid-sea2gklt="true"
+                decoding="async"
+                fetchpriority="auto"
+                width="595"
+                height="589"
+                class="absolute inset-0 block lg:hidden rounded-4 w-full h-full object-cover transition-opacity duration-300 calendar-image opacity-0"
+              />
+              <img
+                src="/photo/month.webp"
+                alt="calendar Month"
+                data-tab-value="month"
+                data-astro-cid-sea2gklt="true"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="auto"
+                width="784"
+                height="558"
+                class="absolute inset-0 hidden lg:block rounded-4 w-full h-full object-cover transition-opacity duration-300 calendar-image opacity-0"
+              />
+              <img
+                src="/photo/month_mobile.webp"
+                alt="calendar Month"
+                data-tab-value="month"
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 0px"
+                data-astro-cid-sea2gklt="true"
+                decoding="async"
+                fetchpriority="auto"
+                width="595"
+                height="589"
+                class="absolute inset-0 block lg:hidden rounded-4 w-full h-full object-cover transition-opacity duration-300 calendar-image opacity-0"
+              />
+              <img
+                src="/photo/year.webp"
+                alt="calendar Year"
+                data-tab-value="year"
+                data-astro-cid-sea2gklt="true"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="auto"
+                width="784"
+                height="558"
+                class="absolute inset-0 hidden lg:block rounded-4 w-full h-full object-cover transition-opacity duration-300 calendar-image opacity-0"
+              />
+              <img
+                src="/photo/year_mobile.webp"
+                alt="calendar Year"
+                data-tab-value="year"
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 0px"
+                data-astro-cid-sea2gklt="true"
+                decoding="async"
+                fetchpriority="auto"
+                width="595"
+                height="589"
+                class="absolute inset-0 block lg:hidden rounded-4 w-full h-full object-cover transition-opacity duration-300 calendar-image opacity-0"
+              />
+              <img
+                src="/photo/ten_years.webp"
+                alt="calendar 10 years"
+                data-tab-value="ten years"
+                data-astro-cid-sea2gklt="true"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="auto"
+                width="784"
+                height="558"
+                class="absolute inset-0 hidden lg:block rounded-4 w-full h-full object-cover transition-opacity duration-300 calendar-image opacity-0"
+              />
+              <img
+                src="/photo/ten_years_mobile.webp"
+                alt="calendar 10 years"
+                data-tab-value="ten years"
+                loading="lazy"
+                sizes="(max-width: 1024px) 100vw, 0px"
+                data-astro-cid-sea2gklt="true"
+                decoding="async"
+                fetchpriority="auto"
+                width="595"
+                height="589"
+                class="absolute inset-0 block lg:hidden rounded-4 w-full h-full object-cover transition-opacity duration-300 calendar-image opacity-0"
+              />
+            </div>
+          </section>
+        </section>
+        <section
+          class="flex flex-col gap-6 lg:gap-8 items-center section-top-indent"
+        >
+          <h3
+            class="text-[24px] lg:text-[44px] leading-7 lg:leading-13 text-center font-bold text-primary"
+          >
+            Manage tasks
+            <br class="lg:hidden" />
+            <span
+              class="text-transparent bg-clip-text bg-linear-to-r from-accent-orange via-accent-orange to-accent-red"
+              >simply and efficiently
+            </span>
+          </h3>
+          <div class="relative flex flex-col gap-4 lg:block lg:h-300 w-full">
+            <div
+              class="lg:absolute lg:top-13.75 lg:left-123 overflow-hidden bg-orange-light shadow-card rounded-5"
+            >
+              <div class="pt-4 text-center px-4 pb-1">
+                <p
+                  class="text-[18px] lg:text-[24px] leading-6 font-bold text-primary"
+                >
+                  Filters and sorting
+                </p>
+              </div>
+              <div class="w-full lg:h-42 lg:w-80 overflow-hidden">
+                <img
+                  src="/photo/filters-and-sorting.webp"
+                  alt="filters and sorting"
+                  loading="lazy"
+                  sizes="(max-width: 1024px) 100vw, 320px"
+                  decoding="async"
+                  fetchpriority="auto"
+                  width="320"
+                  height="168"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div
+              class="bg-purple-light shadow-card rounded-5 lg:absolute lg:top-54.5 lg:left-0"
+            >
+              <div class="pt-4 text-center px-4 pb-1">
+                <p
+                  class="text-[18px] lg:text-[24px] leading-6 font-bold text-primary"
+                >
+                  Reminders and notifications
+                </p>
+              </div>
+              <div class="w-full lg:w-100 lg:h-50">
+                <img
+                  src="/photo/reminders.webp"
+                  alt="reminders and notifications"
+                  loading="lazy"
+                  sizes="(max-width: 1024px) 100vw, 400px"
+                  decoding="async"
+                  fetchpriority="auto"
+                  width="400"
+                  height="200"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div
+              class="bg-white shadow-card rounded-5 lg:absolute lg:top-54.5 lg:right-0"
+            >
+              <div class="pt-4 text-center px-4 pb-1">
+                <p
+                  class="text-[18px] lg:text-[24px] leading-6 font-bold text-primary"
+                >
+                  Attachments
+                  <br class="hidden lg:block" />and checklists
+                </p>
+              </div>
+              <div class="w-full lg:w-80 lg:h-50">
+                <img
+                  src="/photo/attachments.webp"
+                  alt="attachments and checklists"
+                  loading="lazy"
+                  sizes="(max-width: 1024px) 100vw, 320px"
+                  decoding="async"
+                  fetchpriority="auto"
+                  width="320"
+                  height="226"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div
+              class="bg-white shadow-card rounded-5 lg:absolute lg:top-136.25 lg:left-27.5"
+            >
+              <div class="pt-4 text-center px-4 pb-1">
+                <p
+                  class="text-[18px] lg:text-[24px] leading-6 font-bold text-primary"
+                >
+                  Integrations
+                </p>
+              </div>
+              <div class="w-full lg:h-35 lg:w-80 overflow-hidden">
+                <img
+                  src="/photo/integrations.webp"
+                  alt="integrations"
+                  loading="lazy"
+                  sizes="(max-width: 1024px) 100vw, 320px"
+                  decoding="async"
+                  fetchpriority="auto"
+                  width="320"
+                  height="140"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div
+              class="bg-gray-light shadow-card rounded-5 lg:absolute lg:top-95.5 lg:left-136.75"
+            >
+              <div class="pt-4 text-center px-4 pb-1">
+                <p
+                  class="text-[18px] lg:text-[24px] leading-6 font-bold text-primary"
+                >
+                  Recurring tasks
+                </p>
+              </div>
+              <div class="w-full lg:h-86 lg:w-85 overflow-hidden">
+                <img
+                  src="/photo/recurring.webp"
+                  alt="recurring tasks"
+                  loading="lazy"
+                  sizes="(max-width: 1024px) 100vw, 340px"
+                  decoding="async"
+                  fetchpriority="auto"
+                  width="340"
+                  height="344"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div
+              class="bg-gray-light shadow-card rounded-5 lg:absolute lg:top-204.5 lg:left-13.75"
+            >
+              <div class="pt-4 text-center px-4 pb-1">
+                <p
+                  class="text-[18px] lg:text-[24px] leading-6 font-bold text-primary"
+                >
+                  Task tree
+                </p>
+              </div>
+              <div class="w-full lg:h-60 lg:w-100 overflow-hidden">
+                <img
+                  src="/photo/task-tree.webp"
+                  alt="task tree"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="auto"
+                  width="400"
+                  height="240"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div
+              class="bg-purple-light shadow-card rounded-5 lg:absolute lg:top-177.5 lg:right-2"
+            >
+              <div class="pt-4 text-center px-4 pb-1">
+                <p
+                  class="text-[18px] lg:text-[24px] leading-6 font-bold text-primary"
+                >
+                  Across all devices
+                </p>
+              </div>
+              <div class="w-full lg:h-34 lg:w-85 overflow-hidden">
+                <img
+                  src="/photo/across.webp"
+                  alt="across all devices"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="auto"
+                  width="319"
+                  height="136"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div
+              class="bg-orange-light shadow-card rounded-5 lg:absolute lg:top-232 lg:right-97.5"
+            >
+              <div class="pt-4 text-center px-4 pb-1">
+                <p
+                  class="text-[18px] lg:text-[24px] leading-6 font-bold text-primary"
+                >
+                  Roles and access
+                  <br class="hidden lg:block" />controls
+                </p>
+              </div>
+              <div class="w-full lg:h-34 lg:w-80 overflow-hidden">
+                <img
+                  src="/photo/roles.webp"
+                  alt="across all devices"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="auto"
+                  width="320"
+                  height="136"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-top-indent grid lg:gap-15">
+          <h3
+            class="text-[24px] leading-7 lg:text-[44px] pb-10 lg:pb-0 lg:leading-10 font-bold text-center text-primary"
+          >
+            <span
+              class="text-transparent bg-clip-text bg-linear-to-r from-accent-orange via-accent-orange to-accent-red"
+              >Thousands of users
+            </span>
+            are <br class="lg:hidden" />already using LeaderTask
+          </h3>
+          <div class="grid-cols-3 hidden lg:grid gap-8">
+            <div class="flex w-full flex-col gap-8">
+              <div
+                class="py-5 px-6 bg-white shadow-card rounded-5 flex flex-col gap-3"
+              >
+                <div class="flex justify-between">
+                  <span class="text-[20px] leading-6 font-medium text-primary"
+                    >aatanat</span
+                  >
+                  <img
+                    src="/photo/app-store_logo.webp"
+                    alt="app-store logo"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="32"
+                    height="32"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <p class="text-secondary font-semibold">
+                  I was looking for an app to help me plan different areas of my
+                  life: studies, relationships, hobbies. I like that
+                  <span class="text-accent-orange"
+                    >the app syncs with my laptop and phone, and that it's
+                    intuitive - I quickly figured it out</span
+                  >
+                  and wrote down all my tasks, and then just looked at it and
+                  marked what I needed to do during the day.
+                </p>
+                <span class="text-tertiary text-[14px] leading-6"
+                  >April 17, 2025</span
+                >
+              </div>
+              <div
+                class="py-5 px-6 bg-white shadow-card rounded-5 flex flex-col gap-3"
+              >
+                <div class="flex justify-between">
+                  <span class="text-[20px] leading-6 font-medium text-primary"
+                    >komarov-d-v</span
+                  >
+                  <img
+                    src="/photo/app-store_logo.webp"
+                    alt="app-store logo"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="32"
+                    height="32"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <p class="text-secondary font-semibold">
+                  <span class="text-accent-orange"
+                    >Very easy and convenient to use. It saves a lot of time,
+                    makes it comfortable to plan working hours!</span
+                  >
+                  The reminders about scheduled events are just GREAT, no need
+                  to worry that you will forget something!
+                </p>
+                <span class="text-tertiary text-[14px] leading-6"
+                  >April 9, 2025</span
+                >
+              </div>
+            </div>
+            <div class="flex w-full flex-col gap-8">
+              <div
+                class="py-5 px-6 bg-white shadow-card rounded-5 flex flex-col gap-3"
+              >
+                <div class="flex justify-between">
+                  <span class="text-[20px] leading-6 font-medium text-primary"
+                    >Ilsur Shaidullin</span
+                  >
+                  <img
+                    src="/photo/google-play_logo.webp"
+                    alt="google-play logo"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="32"
+                    height="32"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <p class="text-secondary font-semibold">
+                  Seven years ago I was looking for a good task planner, found
+                  Leadertask, started using it, everything was great. But
+                  because the sysadmin refused to install it on my work PC, I
+                  had to stop using it with regret. I changed company and was
+                  surprised when at the beginning of this year, looking for a
+                  good planner, I realized that Leadertask stayed among my
+                  favorites.
+                  <span class="text-accent-orange"
+                    >The main plus for me is usability, everything is intuitive.
+                    I recommend it.</span
+                  >
+                </p>
+                <span class="text-tertiary text-[14px] leading-6"
+                  >May 8, 2025</span
+                >
+              </div>
+              <div
+                class="py-5 px-6 bg-white shadow-card rounded-5 flex flex-col gap-3"
+              >
+                <div class="flex justify-between">
+                  <span class="text-[20px] leading-6 font-medium text-primary"
+                    >Ildar Sul</span
+                  >
+                  <img
+                    src="/photo/google-play_logo.webp"
+                    alt="google-play logo"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="32"
+                    height="32"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <p class="text-secondary font-semibold">
+                  Very convenient app. I bought the premium version,
+                  <span class="text-accent-orange"
+                    >synchronization works, tasks get done.</span
+                  >
+                  Overall everything is great.
+                </p>
+                <span class="text-tertiary text-[14px] leading-6"
+                  >September 6, 2025</span
+                >
+              </div>
+            </div>
+            <div class="flex w-full flex-col gap-8">
+              <div
+                class="py-5 px-6 bg-white shadow-card rounded-5 flex flex-col gap-3"
+              >
+                <div class="flex justify-between">
+                  <span class="text-[20px] leading-6 font-medium text-primary"
+                    >Nina Artamonova</span
+                  >
+                  <img
+                    src="/photo/google-play_logo.webp"
+                    alt="google-play logo"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="32"
+                    height="32"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <p class="text-secondary font-semibold">
+                  This is a very convenient and functional app. All tasks and
+                  plans are in one place. You can create tasks and build a
+                  schedule at any time, whether you're on the go with your phone
+                  or using your computer.
+                  <span class="text-accent-orange"
+                    >Everything syncs, and reminders pop up, the interface is
+                    convenient and clear.</span
+                  >
+                </p>
+                <span class="text-tertiary text-[14px] leading-6"
+                  >July 4, 2025</span
+                >
+              </div>
+              <div
+                class="py-5 px-6 bg-white shadow-card rounded-5 flex flex-col gap-3"
+              >
+                <div class="flex justify-between">
+                  <span class="text-[20px] leading-6 font-medium text-primary"
+                    >Two Kik</span
+                  >
+                  <img
+                    src="/photo/app-store_logo.webp"
+                    alt="app-store logo"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="32"
+                    height="32"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <p class="text-secondary font-semibold">
+                  If I could only keep one app on my phone, it would be
+                  LeaderTask without a doubt. Thank you to the developers
+                  <span class="text-accent-orange"
+                    >for improving the program and providing timely updates and
+                    fixes.</span
+                  >
+                  I use it every day and am delighted by what our developers are
+                  capable of creating! ❤️
+                </p>
+                <span class="text-tertiary text-[14px] leading-6"
+                  >June 11, 2025</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-container overflow-hidden w-full lg:hidden pb-10"
+            data-astro-cid-pvxdty7h
+          >
+            <div class="swiper-wrapper" data-astro-cid-pvxdty7h>
+              <div
+                class="swiper-slide px-5 grid grid-rows-a1a w-full py-4 bg-white shadow-card rounded-5 gap-3"
+                data-astro-cid-pvxdty7h
+              >
+                <div
+                  class="flex justify-between items-center"
+                  data-astro-cid-pvxdty7h
+                >
+                  <span
+                    class="text-[20px] leading-6 font-medium text-primary"
+                    data-astro-cid-pvxdty7h
+                    >aatanat</span
+                  >
+                  <img
+                    src="/photo/app-store_logo.webp"
+                    alt="app-store logo"
+                    data-astro-cid-pvxdty7h="true"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="32"
+                    height="32"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <p class="text-secondary font-semibold" data-astro-cid-pvxdty7h>
+                  I was looking for an app to help me plan different areas of my
+                  life: studies, relationships, hobbies. I like that
+                  <span class="text-accent-orange"
+                    >the app syncs with my laptop and phone, and that it's
+                    intuitive - I quickly figured it out</span
+                  >
+                  and wrote down all my tasks, and then just looked at it and
+                  marked what I needed to do during the day.
+                </p>
+                <span
+                  class="text-tertiary text-[14px] leading-6"
+                  data-astro-cid-pvxdty7h
+                  >April 17, 2025</span
+                >
+              </div>
+              <div
+                class="swiper-slide px-5 grid grid-rows-a1a w-full py-4 bg-white shadow-card rounded-5 gap-3"
+                data-astro-cid-pvxdty7h
+              >
+                <div
+                  class="flex justify-between items-center"
+                  data-astro-cid-pvxdty7h
+                >
+                  <span
+                    class="text-[20px] leading-6 font-medium text-primary"
+                    data-astro-cid-pvxdty7h
+                    >komarov-d-v</span
+                  >
+                  <img
+                    src="/photo/app-store_logo.webp"
+                    alt="app-store logo"
+                    data-astro-cid-pvxdty7h="true"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="32"
+                    height="32"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <p class="text-secondary font-semibold" data-astro-cid-pvxdty7h>
+                  <span class="text-accent-orange"
+                    >Very easy and convenient to use. It saves a lot of time,
+                    makes it comfortable to plan working hours!</span
+                  >
+                  The reminders about scheduled events are just GREAT, no need
+                  to worry that you will forget something!
+                </p>
+                <span
+                  class="text-tertiary text-[14px] leading-6"
+                  data-astro-cid-pvxdty7h
+                  >April 9, 2025</span
+                >
+              </div>
+              <div
+                class="swiper-slide px-5 grid grid-rows-a1a w-full py-4 bg-white shadow-card rounded-5 gap-3"
+                data-astro-cid-pvxdty7h
+              >
+                <div
+                  class="flex justify-between items-center"
+                  data-astro-cid-pvxdty7h
+                >
+                  <span
+                    class="text-[20px] leading-6 font-medium text-primary"
+                    data-astro-cid-pvxdty7h
+                    >Ilsur Shaidullin</span
+                  >
+                  <img
+                    src="/photo/google-play_logo.webp"
+                    alt="google-play logo"
+                    data-astro-cid-pvxdty7h="true"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="32"
+                    height="32"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <p class="text-secondary font-semibold" data-astro-cid-pvxdty7h>
+                  Seven years ago I was looking for a good task planner, found
+                  Leadertask, started using it, everything was great. But
+                  because the sysadmin refused to install it on my work PC, I
+                  had to stop using it with regret. I changed company and was
+                  surprised when at the beginning of this year, looking for a
+                  good planner, I realized that Leadertask stayed among my
+                  favorites.
+                  <span class="text-accent-orange"
+                    >The main plus for me is usability, everything is intuitive.
+                    I recommend it.</span
+                  >
+                </p>
+                <span
+                  class="text-tertiary text-[14px] leading-6"
+                  data-astro-cid-pvxdty7h
+                  >May 8, 2025</span
+                >
+              </div>
+              <div
+                class="swiper-slide px-5 grid grid-rows-a1a w-full py-4 bg-white shadow-card rounded-5 gap-3"
+                data-astro-cid-pvxdty7h
+              >
+                <div
+                  class="flex justify-between items-center"
+                  data-astro-cid-pvxdty7h
+                >
+                  <span
+                    class="text-[20px] leading-6 font-medium text-primary"
+                    data-astro-cid-pvxdty7h
+                    >Ildar Sul</span
+                  >
+                  <img
+                    src="/photo/google-play_logo.webp"
+                    alt="google-play logo"
+                    data-astro-cid-pvxdty7h="true"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="32"
+                    height="32"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <p class="text-secondary font-semibold" data-astro-cid-pvxdty7h>
+                  Very convenient app. I bought the premium version,
+                  <span class="text-accent-orange"
+                    >synchronization works, tasks get done.</span
+                  >
+                  Overall everything is great.
+                </p>
+                <span
+                  class="text-tertiary text-[14px] leading-6"
+                  data-astro-cid-pvxdty7h
+                  >September 6, 2025</span
+                >
+              </div>
+              <div
+                class="swiper-slide px-5 grid grid-rows-a1a w-full py-4 bg-white shadow-card rounded-5 gap-3"
+                data-astro-cid-pvxdty7h
+              >
+                <div
+                  class="flex justify-between items-center"
+                  data-astro-cid-pvxdty7h
+                >
+                  <span
+                    class="text-[20px] leading-6 font-medium text-primary"
+                    data-astro-cid-pvxdty7h
+                    >Nina Artamonova</span
+                  >
+                  <img
+                    src="/photo/google-play_logo.webp"
+                    alt="google-play logo"
+                    data-astro-cid-pvxdty7h="true"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="32"
+                    height="32"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <p class="text-secondary font-semibold" data-astro-cid-pvxdty7h>
+                  This is a very convenient and functional app. All tasks and
+                  plans are in one place. You can create tasks and build a
+                  schedule at any time, whether you're on the go with your phone
+                  or using your computer.
+                  <span class="text-accent-orange"
+                    >Everything syncs, and reminders pop up, the interface is
+                    convenient and clear.</span
+                  >
+                </p>
+                <span
+                  class="text-tertiary text-[14px] leading-6"
+                  data-astro-cid-pvxdty7h
+                  >July 4, 2025</span
+                >
+              </div>
+              <div
+                class="swiper-slide px-5 grid grid-rows-a1a w-full py-4 bg-white shadow-card rounded-5 gap-3"
+                data-astro-cid-pvxdty7h
+              >
+                <div
+                  class="flex justify-between items-center"
+                  data-astro-cid-pvxdty7h
+                >
+                  <span
+                    class="text-[20px] leading-6 font-medium text-primary"
+                    data-astro-cid-pvxdty7h
+                    >Two Kik</span
+                  >
+                  <img
+                    src="/photo/app-store_logo.webp"
+                    alt="app-store logo"
+                    data-astro-cid-pvxdty7h="true"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="32"
+                    height="32"
+                    class="w-8 h-8"
+                  />
+                </div>
+                <p class="text-secondary font-semibold" data-astro-cid-pvxdty7h>
+                  If I could only keep one app on my phone, it would be
+                  LeaderTask without a doubt. Thank you to the developers
+                  <span class="text-accent-orange"
+                    >for improving the program and providing timely updates and
+                    fixes.</span
+                  >
+                  I use it every day and am delighted by what our developers are
+                  capable of creating! ❤️
+                </p>
+                <span
+                  class="text-tertiary text-[14px] leading-6"
+                  data-astro-cid-pvxdty7h
+                  >June 11, 2025</span
+                >
+              </div>
+            </div>
+          </div>
+          <a
+            id="thousands-get-started-button"
+            href="LeaderTask.apk"
+            class="app-button transition-colors cursor-pointer duration-200 relative overflow-hidden app-button--ripple bg-accent-orange text-white hover:bg-accent-orange-dark active:bg-accent-orange-dark font-bold px-3 py-2 lg:px-6 lg:py-4 text-sm lg:text-[22px] leading-6 rounded-3 font-bold no-underline text-white! w-max mx-auto"
+            data-click-effect="true"
+            data-astro-cid-c6ht4qe3="true"
+            >Get started for free
+          </a>
+        </section>
+        <section class="section-top-indent">
+          <div
+            class="p-4 lg:p-8 flex flex-col bg-dark-overlay gap-6 lg:gap-15 bg-cover bg-center rounded-2.5 lg:rounded-5"
+            style="background-image: url(/photo/planner-gradient.webp)"
+          >
+            <h3
+              class="text-[24px] text-center lg:text-left lg:text-[44px] lg:leading-10 font-bold text-white"
+            >
+              A task planner
+              <br class="lg:hidden" />you can trust
+            </h3>
+            <div class="grid lg:grid-cols-3 gap-8">
+              <div class="hidden lg:block"></div>
+              <div
+                class="px-4 py-3 lg:px-6 justify-center lg:justify-start lg:min-h-35 flex items-center lg:py-6.5 bg-white rounded-1.5"
+              >
+                <p class="text-[16px] lg:text-[32px] lg:leading-8 text-primary">
+                  <span
+                    class="text-transparent font-semibold bg-clip-text bg-linear-to-r from-accent-orange via-accent-orange to-accent-red"
+                    >12+
+                  </span>
+                  years building IT solutions
+                </p>
+              </div>
+              <div
+                class="px-4 py-3 lg:px-6 justify-center lg:justify-start lg:min-h-35 flex items-center lg:py-6.5 bg-white rounded-1.5"
+              >
+                <p class="text-[16px] lg:text-[32px] lg:leading-8 text-primary">
+                  Secured by
+                  <span
+                    class="text-transparent font-semibold bg-clip-text bg-linear-to-r from-accent-orange via-accent-orange to-accent-red"
+                    >ISO/IEC 27001:2005
+                  </span>
+                </p>
+              </div>
+              <div class="hidden lg:block"></div>
+              <div
+                class="px-4 py-3 lg:px-6 justify-center lg:justify-start lg:min-h-35 flex items-center lg:py-6.5 bg-white rounded-1.5"
+              >
+                <p class="text-[16px] lg:text-[32px] lg:leading-8 text-primary">
+                  High availability
+                  <span
+                    class="text-transparent font-semibold bg-clip-text bg-linear-to-r from-accent-orange via-accent-orange to-accent-red"
+                    >99.9%
+                  </span>
+                </p>
+              </div>
+              <div
+                class="px-4 py-3 lg:px-6 justify-center lg:justify-start lg:min-h-35 flex items-center lg:py-6.5 bg-white rounded-1.5"
+              >
+                <p class="text-[16px] lg:text-[32px] lg:leading-8 text-primary">
+                  <span
+                    class="text-transparent font-semibold bg-clip-text bg-linear-to-r from-accent-orange via-accent-orange to-accent-red"
+                    >Free
+                  </span>
+                  support
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-top-indent grid">
+          <div
+            id="companies-swiper"
+            class="w-full h-32 grid-cols-full overflow-hidden"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide w-full h-full">
+                <div class="w-full h-full flex items-center">
+                  <img
+                    src="/photo/albilad-bank.webp"
+                    alt="albilad-bank"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="640"
+                    height="200"
+                    class="w-full min-w-25 h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <div class="w-full h-full flex items-center">
+                  <img
+                    src="/photo/bnp-paribas.webp"
+                    alt="bnp-paribas"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="640"
+                    height="132"
+                    class="w-full min-w-25 h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <div class="w-full h-full flex items-center">
+                  <img
+                    src="/photo/logivert.webp"
+                    alt="logivert"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="640"
+                    height="116"
+                    class="w-full min-w-25 h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <div class="w-full h-full flex items-center">
+                  <img
+                    src="/photo/sitronics.webp"
+                    alt="sitronics"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="640"
+                    height="128"
+                    class="w-full min-w-25 h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <div class="w-full h-full flex items-center">
+                  <img
+                    src="/photo/kucheneli.webp"
+                    alt="kucheneli"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="640"
+                    height="104"
+                    class="w-full min-w-25 h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <div class="w-full h-full flex items-center">
+                  <img
+                    src="/photo/lukoil.webp"
+                    alt="lukoil"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="640"
+                    height="128"
+                    class="w-full min-w-25 h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <div class="w-full h-full flex items-center">
+                  <img
+                    src="/photo/tajero.webp"
+                    alt="tajero"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="560"
+                    height="160"
+                    class="w-full min-w-25 h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <div class="w-full h-full flex items-center">
+                  <img
+                    src="/photo/allieduniversal.webp"
+                    alt="allieduniversal"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="640"
+                    height="125"
+                    class="w-full min-w-25 h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <div class="w-full h-full flex items-center">
+                  <img
+                    src="/photo/probitek.webp"
+                    alt="probitek"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="640"
+                    height="173"
+                    class="w-full min-w-25 h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <div class="w-full h-full flex items-center">
+                  <img
+                    src="/photo/9am.webp"
+                    alt="9am"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="640"
+                    height="216"
+                    class="w-full min-w-25 h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <div class="w-full h-full flex items-center">
+                  <img
+                    src="/photo/faberlic.webp"
+                    alt="faberlic"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="480"
+                    height="480"
+                    class="w-full min-w-25 h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide w-full h-full">
+                <div class="w-full h-full flex items-center">
+                  <img
+                    src="/photo/icts.webp"
+                    alt="icts"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="auto"
+                    width="428"
+                    height="240"
+                    class="w-full min-w-25 h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-top-indent">
+          <div
+            class="bg-accent-orange rounded-[10px] lg:rounded-5 grid lg:grid-cols-a1 items-center"
+          >
+            <div class="flex flex-col lg:max-w-132 p-8 gap-8">
+              <div class="flex flex-col text-center lg:text-left gap-6">
+                <h3
+                  class="text-[24px] leading-7 lg:text-[44px] lg:leading-13 font-bold text-white"
+                >
+                  Always with you – online and offline
+                </h3>
+                <p class="text-[16px] lg:text-[20px] lg:leading-8 text-white">
+                  Use LeaderTask offline. All your tasks will sync across
+                  devices the moment you're back online.
+                </p>
+              </div>
+              <a
+                id="always-online-button"
+                href="LeaderTask.apk"
+                class="app-button transition-colors cursor-pointer duration-200 relative overflow-hidden app-button--ripple bg-white text-accent-orange hover:bg-orange-light active:bg-orange-light font-semibold px-3 py-2 lg:px-6 lg:py-4 text-sm lg:text-[22px] leading-6 rounded-3 font-bold no-underline !text-[#FF4C00] w-max mx-auto lg:mx-0"
+                data-click-effect="true"
+                data-astro-cid-c6ht4qe3="true"
+                >Get started for free
+              </a>
+            </div>
+            <div
+              class="h-43.75 px-4 pb-6 lg:p-0 lg:h-135 w-full flex justify-center lg:justify-end"
+            >
+              <img
+                src="/photo/always-online.webp"
+                alt="Always online"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="auto"
+                width="2707"
+                height="1943"
+                class="w-full max-w-188 h-full object-contain hidden lg:block"
+              />
+              <img
+                src="/photo/always_mobile.webp"
+                alt="Always online"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="auto"
+                width="1183"
+                height="700"
+                class="w-full h-full object-contain lg:hidden"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="bg-light mt-15 lg:mt-30">
+      <div
+        class="xl:container lg:mx-auto p-5 lg:p-16 flex flex-col gap-5 lg:gap-12"
+      >
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 lg:gap-8">
+          <div class="text-primary flex flex-col gap-5 lg:gap-6">
+            <p
+              class="text-[16px] lg:text-[22px] leading-5 lg:leading-6 font-bold"
+            >
+              Platforms
+            </p>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="LeaderTask.apk"
+                  class="hover:text-accent-orange text-[14px] lg:text-[16px] transition-colors duration-200"
+                  >Android
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-primary flex flex-col gap-6">
+            <p
+              class="text-[16px] lg:text-[22px] leading-5 lg:leading-6 font-bold"
+            >
+              Download
+            </p>
+            <ul class="flex flex-col gap-2">
+              <li class="relative group cursor-pointer w-36.5 lg:w-37 h-10">
+                <a
+                  href="LeaderTask.apk"
+                  target="_blank"
+                  rel="noopener noreferrer noopener"
+                  aria-label="Скачать LeaderTask из Google Play"
+                >
+                  <img
+                    src="/photo/google-play_black.webp"
+                    alt=""
+                    class="w-full h-full group-hover:opacity-0 transition-all duration-200"
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                  <img
+                    src="/photo/google-play_black.webp"
+                    alt=""
+                    class="w-full h-full opacity-0 group-hover:opacity-100 transition-all duration-200 absolute inset-0"
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </a>
+              </li>
+             
+              
+            </ul>
+          </div>
+        </div>
+        <div class="opacity-20">
+          <div class="w-full h-px" style="background-color: #848594"></div>
+        </div>
+        <div class="flex flex-col gap-5 lg:flex-row justify-between">
+          <div class="flex flex-col lg:flex-row items-center gap-5 lg:gap-12">
+            <a
+              href="/"
+              class="order-2 lg:order-0"
+              aria-label="LeaderTask - перейти на главную страницу"
+            >
+              <svg class="w-32.5 lg:w-41 h-10" aria-hidden="true">
+                <use href="/photo/all-icons.svg#icon-logo"></use>
+              </svg>
+            </a>
+            <div class="opacity-20 lg:hidden order-1">
+              <div class="w-full h-px" style="background-color: #848594"></div>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-5 lg:gap-12">
+              <p
+                class="font-bold text-[16px] leading-5 text-primary text-center lg:hidden"
+              >
+                Contact us
+              </p>
+              <a
+                href="mailto:911@leadertask.com"
+                class="flex gap-3 text-primary lg:text-secondary lg:font-medium items-center lg:hover:text-accent-orange transition-colors duration-200"
+                aria-label="Написать нам на email: 911@leadertask.com"
+              >
+                <svg class="w-5 h-5" aria-hidden="true">
+                  <use href="/photo/all-icons.svg#icon-email"></use>
+                </svg>
+                <span class="text-[14px] leading-5 lg:text-[16px] lg:leading-6"
+                  >911@leadertask.com</span
+                >
+              </a>
+              <div class="flex gap-4 justify-center lg:justify-start">
+                <a
+                  href="https://t.me/leadertask_support"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="w-8 cursor-pointer group h-8 relative"
+                  aria-label="Связаться с нами в Telegram"
+                >
+                  <svg
+                    class="w-full h-full gorup-hover:opacity-0 transition-all duration-200"
+                    aria-hidden="true"
+                  >
+                    <use
+                      href="/photo/all-icons.svg#icon-telegram-transparent"
+                    ></use>
+                  </svg>
+                  <svg
+                    class="w-full h-full absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-200"
+                    aria-hidden="true"
+                  >
+                    <use href="/photo/all-icons.svg#icon-telegram"></use>
+                  </svg>
+                </a>
+                <a
+                  href="https://www.youtube.com/@LeadertaskOrganizer/featured"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="w-8 cursor-pointer group h-8 relative"
+                  aria-label="Подписаться на наш YouTube канал"
+                >
+                  <svg
+                    class="w-full h-full gorup-hover:opacity-0 transition-all duration-200"
+                    aria-hidden="true"
+                  >
+                    <use
+                      href="/photo/all-icons.svg#icon-youtube-transparent"
+                    ></use>
+                  </svg>
+                  <svg
+                    class="w-full h-full absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-200"
+                    aria-hidden="true"
+                  >
+                    <use href="/photo/all-icons.svg#icon-youtube"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-2 w-max mx-auto lg:mx-0 lg:w-auto lg:flex gap-4 lg:gap-6 items-center"
+          >
+            <a
+              href="/privacy-policy.html"
+              class="flex text-[14px] font-medium hover:text-accent-orange transition-all duration-200 group leading-5 text-secondary"
+            >
+              <span>Privacy Policy</span>
+              <svg
+                class="w-5 text-accent-orange transition-all duration-200 -translate-y-0.75 group-hover:-translate-y-1.25 h-5"
+              >
+                <use href="/photo/all-icons.svg#icon-arrow-more"></use>
+              </svg>
+            </a>
+            <a
+              href="/user-agreement.html"
+              class="flex text-[14px] font-medium hover:text-accent-orange transition-all duration-200 group leading-5 text-secondary"
+            >
+              <span>User Agreement</span>
+              <svg
+                class="w-5 text-accent-orange transition-all duration-200 -translate-y-0.75 group-hover:-translate-y-1.25 h-5"
+              >
+                <use href="/photo/all-icons.svg#icon-arrow-more"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="opacity-20">
+          <div class="w-full h-px" style="background-color: #848594"></div>
+        </div>
+        <span class="block mx-auto text-[12px] leading-4 text-tertiary"
+          >© 2026 Organizer LeaderTask, LLC</span
+        >
+      </div>
+    </footer>
+    <div
+      id="cookie-consent"
+      class="fixed bottom-0 left-0 right-0 z-100 flex justify-center px-0 md:px-5 pb-0 md:pb-5 translate-y-full opacity-0 transition-all duration-300 ease-out"
+      data-hidden="true"
+    >
+      <div
+        class="w-full max-w-336 h-full md:h-25 bg-dark-alpha-90 rounded-t-5 md:rounded-5 flex flex-col md:flex-row items-center justify-between gap-8 pt-5 pb-8 md:py-0 px-5 md:pl-8 md:pr-5 relative"
+      >
+        <div
+          class="flex flex-col md:flex-row items-start md:items-center md:justify-start gap-5"
+        >
+          <svg class="w-10 h-10 md:w-15 md:h-15" aria-hidden="true">
+            <use href="/photo/all-icons.svg#icon-cookie"></use>
+          </svg>
+          <p class="text-white text-[18px] font-medium leading-6 select-none">
+            We use cookies to ensure the website works properly. By staying on
+            our site, you agree to our
+            <a
+              href="/privacy-policy"
+              class="text-white underline text-[18px] font-medium leading-6"
+              >Privacy Policy.
+            </a>
+          </p>
+        </div>
+        <div class="flex w-full md:w-auto gap-8 shrink-0 items-center">
+          <div class="flex w-full md:w-auto items-center gap-5">
+            <button
+              id="cookie-accept"
+              class="w-full md:w-20.5 h-10 text-white bg-white/20 hover:text-primary text-[16px] font-semibold leading-5 border border-white rounded-2 bg-dark-alpha-20 hover:bg-white active:bg-white active:text-primary px-3 pb-3 pt-2 transition-colors"
+            >
+              Accept
+            </button>
+            <button
+              id="cookie-decline"
+              class="w-full md:w-20.5 h-10 text-white hover:text-primary text-[16px] font-semibold leading-5 border border-white bg-transparent hover:bg-white active:bg-white active:text-primary rounded-2 px-3 pb-3 pt-2 transition-colors"
+            >
+              Decline
+            </button>
+          </div>
+          <button
+            id="cookie-close"
+            class="absolute top-2 right-2 md:top-0 md:right-0 md:relative w-10 h-10 flex justify-center items-center text-white bg-transparent rounded-2 hover:bg-white/20 active:bg-white/20 active:text-white shrink-0 p-0 z-1 transition-colors"
+            aria-label="Закрыть уведомление о cookies"
+          >
+            <svg class="w-6 h-6" aria-hidden="true">
+              <use href="/photo/all-icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      (function () {
+        if (typeof window === "undefined") return;
+        window.addEventListener("load", function () {
+          setTimeout(function () {
+            (function (m, e, t, r, i, k, a) {
+              m[i] =
+                m[i] ||
+                function () {
+                  (m[i].a = m[i].a || []).push(arguments);
+                };
+              m[i].l = 1 * new Date();
+              for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) return;
+              }
+              k = e.createElement(t);
+              a = e.getElementsByTagName(t)[0];
+              k.async = 1;
+              k.src = r;
+              a.parentNode.insertBefore(k, a);
+            })(
+              window,
+              document,
+              "script",
+              "https://mc.yandex.ru/metrika/tag.js",
+              "ym",
+            );
+
+            ym(49744999, "init", {
+              webvisor: true,
+              clickmap: true,
+              accurateTrackBounce: true,
+              trackLinks: true,
+            });
+          }, 0);
+        });
+      })();
+    </script>
+    <noscript>
+      <div>
+        <img
+          src="https://mc.yandex.ru/watch/49744999"
+          style="position: absolute; left: -9999px"
+          alt=""
+        />
+      </div>
+    </noscript>
+    <script
+      type="module"
+      src="Layout.astro_astro_type_script_index_0_lang.7AQKA6LE.js"
+    ></script>
+  </body>
+</html>
